@@ -18,9 +18,7 @@ const RoomPage = async ({ params }) => {
 
   const imageUrl = `https://cloud.appwrite.io/v1/storage/buckets/${bucketId}/files/${room.image}/view?project=${projectId}`;
 
-  const imageSrc = room.image
-    ? `/images/${room.image}`
-    : "/images/no-image.jpg";
+  const imageSrc = room.image ? imageUrl : "/images/no-image.jpg";
 
   return (
     <>
