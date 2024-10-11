@@ -1,7 +1,10 @@
 import { Inter } from "next/font/google";
-import Header from "@/components/Header"
+import Header from "@/components/Header";
 import "@/assets/styles/globals.css";
 import Footer from "@/components/Footer";
+
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +22,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <ToastContainer />
       </body>
     </html>
   );
